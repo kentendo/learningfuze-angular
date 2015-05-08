@@ -33,3 +33,6 @@ Display the first item in the "lines" array in the INFO container and don't show
 "lines" here is just a string. Display it in the INFO container.
 
 4. Once the user reaches the end of a code type or info type, pressing ENTER will load up the next task within the sequence (don't worry about it going out of bounds on the last task)
+
+
+Upload code to a repository (for instance, Github or Bitbucket) and share it with eric.johnson@learningfuze.com
