@@ -1,3 +1,7 @@
+You can view a demo of this here...
+
+[http://learningfuze.kennycosca.com/](http://learningfuze.kennycosca.com/)
+
 # README #
 
 LEARNINGFUZE JAVASCRIPT TEST:
