@@ -23,7 +23,7 @@ angular.module('learningfuze.controllers', ['learningfuze.config', 'learningfuze
   $scope.setTask = function(taskIndex){
     // if the currentSequence hasn't been set we need to exit
     if(!$scope.currentSequence) return;
-    // clear the editor and set focus
+    // clear the editor
     $scope.editor.setValue('');
     // check if this task exists
     if(!$scope.set.sequences[$scope.currentSequenceIndex].tasks[taskIndex]) return;
@@ -56,7 +56,6 @@ angular.module('learningfuze.controllers', ['learningfuze.config', 'learningfuze
     // need to load this class
     var Range = ace.require('ace/range').Range;
     // clear markers
-    
     for(var j in $scope.markers)
       $scope.editor.session.removeMarker($scope.markers[j]);
     $scope.markers = [];
@@ -117,6 +116,11 @@ angular.module('learningfuze.controllers', ['learningfuze.config', 'learningfuze
   $scope.onSequenceComplete = function(){
     $scope.currentSequence.complete = true;
     confirm(LessonConfig.sequenceCompleteMessage);  
+    $scope.currentSequenceIndex = undefined;
+    $scope.currentTaskIndex = undefined;
+    $scope.currentSequence = undefined;
+    $scope.currentTask = undefined;
+    $scope.editor.setValue('');
   };
   
   // event from ace editor
