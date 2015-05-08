@@ -1,0 +1,8 @@
+<li data-dropdown data-ng-repeat="sequence in set.sequences" role="presentation" class="dropdown" data-ng-class="{ active: currentSequenceIndex === $index }">
+  <a data-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-ng-class="{ complete: sequence.complete }">{{sequence.name}} <span class="caret"></span></a>
+  <ul class="dropdown-menu" role="menu"">
+    <li data-ng-class="{ complete: task.complete,  active: currentTaskIndex === $index && currentSequenceIndex === $parent.$index }" ng-repeat="task in sequence.tasks" data-ng-click="menuController.onClick($parent.$index, $index)">
+      <a>{{task.name}}</a>
+    </li>
+  </ul>
+</li>
