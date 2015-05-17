@@ -11,16 +11,11 @@ h1 {
 }
 
 .nav-pills > li > a.complete {
-  background-color:green;
-  color:white;
+  background-color:#D1FFD1;
 }
 
 .dropdown-menu > li.complete {
-  background-color:green;
-}
-
-.dropdown-menu > li.complete > a {
-  color:white;
+  background-color:#D1FFD1;
 }
 
 [data-lesson-board] {
